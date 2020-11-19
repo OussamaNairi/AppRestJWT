@@ -16,7 +16,7 @@ import tn.essat.dao.ILivreDao;
 import tn.essat.model.Livre;
 
 @RestController
-@RequestMapping
+@RequestMapping("/rest")
 public class AppController {
 	
 	@Autowired

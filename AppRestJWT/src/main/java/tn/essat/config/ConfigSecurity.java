@@ -23,7 +23,7 @@ public class ConfigSecurity  extends WebSecurityConfigurerAdapter  {
     }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       
+    
 	  http.cors()
 	  .and().csrf().disable()
 	  .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -33,7 +33,7 @@ public class ConfigSecurity  extends WebSecurityConfigurerAdapter  {
 	  .antMatchers("/rest/add**").hasRole("ADMIN")
 	  .anyRequest().authenticated()
 	  .and()
-	  .addFilterBefore(new Filter(), UsernamePasswordAuthenticationFilter.class);
+	  .addFilterBefore(Filter(), UsernamePasswordAuthenticationFilter.class);
 	 
 	   
 	   
